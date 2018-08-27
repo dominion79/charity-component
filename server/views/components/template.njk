@@ -1,0 +1,51 @@
+{% from "components/header/macro.njk" import htmlHeader %}
+{% from "components/footer/macro.njk" import htmlFooter %}
+
+<!DOCTYPE html>
+<html lang="{{ htmlLang | default('en') }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% block pageTitle %}Page title{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% block headIcons %}{% endblock %}
+
+    {% block head %}{% endblock %}
+
+    <link rel="manifest" href="site.webmanifest">
+
+  </head>
+  <body class="{{ bodyClasses }}">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+
+    {% block bodyStart %}{% endblock %}
+
+    {% block header %}
+      {{ htmlHeader({}) }}
+    {% endblock %}
+    
+    <div class="container">
+      <main class="wrapper {{ mainClasses }}" id="main-content" role="main">
+        {% block content %}{% endblock %}
+      </main>
+    </div>
+
+    {% block footer %}
+      {{ htmlFooter({}) }}
+    {% endblock %}
+
+
+    {% block bodyEnd %}{% endblock %}
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+      window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+      ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+  </body>
+</html>
