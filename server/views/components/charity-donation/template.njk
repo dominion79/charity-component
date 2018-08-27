@@ -4,17 +4,17 @@
         <p class="regular">Manchester Refugee Support Network (MRSN)</p>
 
         <div class="charity-donation__bar-outline">
-            <div class="charity-donation__bar" id="bar"></div>
+            <div class="charity-donation__bar" id="bar" style="width:{{ params.percentage }}%;"></div>
         </div>
 
         <div class="charity-donation__figures-row">
             <div class="charity-donation__figures-raised-so-far">
                 <p class="charity-donation__figures-title regular">Raised so far</p>
-                <p class="charity-donation__figures-currency bold">£2,792.55</p>
+                <p class="charity-donation__figures-currency bold">£ {{ params.donationfigures.raised }}</p>
             </div>
             <div class="charity-donation__figures-target">
                 <p class="charity-donation__figures-title regular">Target</p>
-                <p class="charity-donation__figures-currency bold">£4,500</p>
+                <p class="charity-donation__figures-currency bold">£ {{ params.donationfigures.target }}</p>
             </div>
         </div>
 

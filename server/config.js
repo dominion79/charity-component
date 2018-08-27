@@ -12,4 +12,7 @@ function get(name, fallback, options = {}) {
 
 module.exports = {
   sessionSecret: get('SESSION_SECRET', 'app-insecure-default-session', { requireInProduction: true }),
+  api: {
+    coopMockTest: get('COOP_MOCK_API_ENDPOINT'),
+  },
 };

@@ -1,14 +1,16 @@
 const createApp = require('./app');
 const logger = require('../log');
 
-const createSomeService = require('./services/someService');
+const getDonationFiguresService = require('./services/donationFiguresService');
+const CharityClient = require('./clients/charityClient');
 
-// pass in dependencies of service
-const someService = createSomeService();
+const donationFiguresService = getDonationFiguresService(
+  new CharityClient(),
+);
 
 const app = createApp({
   logger,
-  someService,
+  donationFiguresService,
 });
 
 module.exports = app;
