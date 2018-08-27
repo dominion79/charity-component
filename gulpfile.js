@@ -15,17 +15,15 @@ const mocha = require('gulp-mocha');
 /**
  * Settings
  */
-const src = 'src/';
-const dest = 'assets/';
+const src = 'assets/';
+const dest = 'assets/build/';
 
 const srcPaths = {
-  styles: `${src}_css/**/*.scss`,
-  scripts: `${src}_js/**/*.js`,
+  styles: `${src}sass/**/*.scss`,
+  scripts: `${src}javascript/**/*.js`,
   assets: [
-    `${src}_assets/**/*`,
     'node_modules/coop-frontend-toolkit/static/**/*',
   ],
-  html: `${src}**/*.html`,
 };
 
 const destPaths = {
@@ -48,27 +46,13 @@ const settings = {
 };
 
 
-/**
- * Lint tasks
- */
-gulp.task('lintjs', () => {
-  gulp.src(srcPaths.scripts)
-    .pipe(jshint())
-    .pipe(jshint.reporter(stylish));
-});
-
-gulp.task('lintscss', () => {
-  gulp.src(srcPaths.styles)
-    .pipe(scsslint());
-});
-
 
 /**
  * Build tasks
  */
 
 // Styles
-gulp.task('css', ['lintscss'], () => {
+gulp.task('css', () => {
   gulp.src(srcPaths.styles)
     .pipe(sourcemaps.init())
     .pipe(sass(settings.sass))
@@ -80,7 +64,7 @@ gulp.task('css', ['lintscss'], () => {
 });
 
 // Scripts
-gulp.task('js', ['lintjs'], () => {
+gulp.task('js', () => {
   gulp.src(srcPaths.scripts)
     .pipe(sourcemaps.init())
     .pipe(include())
@@ -112,10 +96,9 @@ gulp.task('testjs', () => {
  * Watch tasks
  */
 gulp.task('watch', () => {
-  gulp.watch(srcPaths.styles, ['lintscss', 'css']);
-  gulp.watch(srcPaths.scripts, ['lintjs', 'js']);
+  gulp.watch(srcPaths.styles, ['css']);
+  gulp.watch(srcPaths.scripts, ['js']);
   gulp.watch(srcPaths.assets, ['assets']);
-  gulp.watch([srcPaths.html, `${src}_config.yml`], ['html']);
 });
 
 
