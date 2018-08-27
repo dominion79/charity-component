@@ -1,6 +1,4 @@
-# Charity Component
-
-`npm rebuild dtrace-provider`
+# Charity Donation Component
 
 ## Package information 
 
