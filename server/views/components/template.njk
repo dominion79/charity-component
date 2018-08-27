@@ -24,20 +24,25 @@
 
     {% block bodyStart %}{% endblock %}
 
-    {% block header %}
-      {{ htmlHeader({}) }}
-    {% endblock %}
-    
     <div class="container">
-      <main class="wrapper {{ mainClasses }}" id="main-content" role="main">
+      <main class="content-wrapper {{ mainClasses }}" id="main-content" role="main">
+
+        {% block header %}
+          {{ htmlHeader({
+            classes: "wrap"
+          }) }}
+        {% endblock %}
+        
         {% block content %}{% endblock %}
+
+        {% block footer %}
+          {{ htmlFooter({
+            classes: "wrap"
+          }) }}
+        {% endblock %}
+        
       </main>
     </div>
-
-    {% block footer %}
-      {{ htmlFooter({}) }}
-    {% endblock %}
-
 
     {% block bodyEnd %}{% endblock %}
 
