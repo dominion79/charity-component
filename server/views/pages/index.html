@@ -1,4 +1,6 @@
 {% extends "../components/template.njk" %}
+{% from "components/charity-donation/macro.njk" import charityDonation %}
+
 
 {% block head %}
   <link rel="stylesheet" href="public/stylesheets/application.css">
@@ -11,7 +13,15 @@
 
 {% block content %}
   <article class="wrap">
-    <p>HTML Boilerplate</p>
+  
+    <div class="row">
+      <div class="column small-12 medium-5">
+        {{ charityDonation({
+          classes: "wrap"
+        }) }}
+      </div>
+    </div>
+    
   </article>
   
 {% endblock %}
