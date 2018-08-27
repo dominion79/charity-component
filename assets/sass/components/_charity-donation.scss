@@ -51,50 +51,55 @@
     }
 }
 
-.charity-donation__raised-so-far,
-.charity-donation__target {
-    display: inline-block;
-    float: left;
+.charity-donation__figures-row {
 
-    .title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .charity-donation__figures-raised-so-far {
+        display: inline-block;
+        flex-grow: 2;
+        margin-right: 10px;
+        margin-bottom: 0;
+        
+    }
+
+    .charity-donation__figures-target {
+        display: inline-block;
+        flex-grow: 1;
         margin-bottom: 0;
     }
 
-    .currency {
-        font-size: 30px;
+    .charity-donation__figures-title {
+        margin-bottom: 0;
     }
-}
 
-.charity-donation__raised-so-far {
-    width: 40%;
-
-}
-
-.charity-donation__target {
-    width: 60%;
+    .charity-donation__figures-currency {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
 }
 
 .form-row {
     display: flex;
     align-items: center;
     width: 100%;
+
+    .donate-input-warp {
+        display: inline-block;
+        flex-grow: 2;
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+    
+    .donate-button-warp {
+        display: inline-block;
+        flex-grow: 1;
+        margin-bottom: 0;
+    }
 }
 
-.donate-input-warp {
-    display: inline-block;
-    flex-grow: 1;
-    margin-right: 10px;
-    margin-bottom: 0;
-    width: 40%;
-}
-
-.donate-button-warp {
-    display: inline-block;
-    flex-grow: 1;
-    margin-right: 10px;
-    margin-bottom: 0;
-    width: 20%;
-}
 
 .hidden {
     display: none;
