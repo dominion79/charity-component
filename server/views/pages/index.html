@@ -33,4 +33,9 @@ Front-end dev test
 {% block bodyEnd %}
   {# Run JavaScript at end of the <body>, to avoid blocking the initial render. #}
   <script src="public/javascript/main.js"></script>
+  <script>
+  window.onload = function () {
+    document.getElementById("bar").style.width = {{percentage}} + '%';
+  };
+</script>
 {% endblock %}

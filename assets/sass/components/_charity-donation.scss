@@ -1,4 +1,18 @@
+@keyframes move-in {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+
 .charity-donation {
+    animation: move-in;
+    animation-duration: 1s;
     border: 1px solid $grey-mid;
 
     hr {
@@ -26,28 +40,24 @@
     }
 }
 
-.charity-donation__title {
-
-}
-
 .charity-donation__bar-outline {
     border: 1px solid $green-mid;
     margin: 30px 0;
     height: 32px;
     position: relative;
-}
 
-.charity-donation__bar {
-    background: $green-mid;
-    transition: all 0.5s ease-out;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    height: 30px;
-    width: 0;
-    
-    &.active {
-        width: 75%;
+    .charity-donation__bar {
+        background: $green-mid;
+        transition: all 0.5s ease-out;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        height: 30px;
+        width: 0;
+        
+        &.active {
+            width: 75%;
+        }
     }
 }
 
@@ -81,7 +91,7 @@
     }
 }
 
-.form-row {
+.charity-donation__form-row {
     display: flex;
     align-items: center;
     width: 100%;
@@ -91,21 +101,20 @@
         flex-grow: 2;
         margin-right: 10px;
         margin-bottom: 0;
+
+        .hidden {
+            display: none;
+        }
+        
+        .charity-donation__donation-input {
+            padding: 18px 8px;
+        }
     }
-    
     .donate-button-warp {
         display: inline-block;
         flex-grow: 1;
         margin-bottom: 0;
     }
-}
-
-
-.hidden {
-    display: none;
-}
-.charity-donation__donation {
-    padding: 18px 8px;
 }
 
 .charity-donation__learn-more {
