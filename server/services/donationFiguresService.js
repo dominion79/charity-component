@@ -10,15 +10,8 @@ function getDonationFiguresService(httpClient) {
     }
   }
 
-  async function calculatePercentage() {
-    const figures = await getFigures();
-    const increase = figures.target - figures.raised;
-    return (increase / figures.target) * 100;
-  }
-
   return {
     getFigures,
-    calculatePercentage,
   };
 }
 

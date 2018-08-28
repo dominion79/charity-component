@@ -1,13 +1,13 @@
 const express = require('express');
 
-module.exports = function Index({ logger, donationFiguresService }) {
+module.exports = function Index({ logger, donationFiguresService, calculatePercentage }) {
   const router = express.Router();
 
   router.get('/', async (req, res) => {
     logger.info('GET index');
 
     const donationFigures = await donationFiguresService.getFigures();
-    const percentage = await donationFiguresService.calculatePercentage();
+    const percentage = await calculatePercentage(donationFigures.target, donationFigures.raised);
 
     res.render('pages/index', { donationFigures, percentage });
   });

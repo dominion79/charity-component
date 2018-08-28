@@ -11,6 +11,7 @@ describe('Charity donation figure', () => {
   });
 });
 
+
 function generateDonationFiguresMock() {
   const httpClient = {
     get: sinon.stub().returns({

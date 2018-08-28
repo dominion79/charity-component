@@ -20,7 +20,7 @@ const version = moment.now().toString();
 const production = process.env.NODE_ENV === 'production';
 const testMode = process.env.NODE_ENV === 'test';
 
-module.exports = function createApp({ logger, donationFiguresService }) { // eslint-disable-line no-shadow
+module.exports = function createApp({ logger, donationFiguresService, calculatePercentage }) { // eslint-disable-line no-shadow
   const app = express();
 
   app.set('json spaces', 2);
@@ -135,7 +135,7 @@ module.exports = function createApp({ logger, donationFiguresService }) { // esl
   }
 
   // Routing
-  app.use('/', createIndexRouter({ logger, donationFiguresService }));
+  app.use('/', createIndexRouter({ logger, donationFiguresService, calculatePercentage }));
 
   app.use(renderErrors);
 

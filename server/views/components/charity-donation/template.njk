@@ -10,11 +10,11 @@
         <div class="charity-donation__figures-row">
             <div class="charity-donation__figures-raised-so-far">
                 <p class="charity-donation__figures-title regular">Raised so far</p>
-                <p class="charity-donation__figures-currency bold">£ {{ params.donationfigures.raised }}</p>
+                <p  id="raised" class="charity-donation__figures-currency bold">£ {{ params.donationfigures.raised }}</p>
             </div>
             <div class="charity-donation__figures-target">
                 <p class="charity-donation__figures-title regular">Target</p>
-                <p class="charity-donation__figures-currency bold">£ {{ params.donationfigures.target }}</p>
+                <p id="target" class="charity-donation__figures-currency bold">£ {{ params.donationfigures.target }}</p>
             </div>
         </div>
 
@@ -39,3 +39,12 @@
         <p class="regular"><a href="#" title="Learn more about causes local to you" class="charity-donation__learn-more">Learn more about causes local to you</a></p>
     </div>
 </article>
+
+<script>
+  function animateBar() {
+    setTimeout(function () {
+        document.getElementById("bar").style.width = {{ params.percentage }} + '%';
+      }, 1000)
+  }
+  addEventListener('load', animateBar);
+</script>
