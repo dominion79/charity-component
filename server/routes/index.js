@@ -7,7 +7,7 @@ module.exports = function Index({ logger, donationFiguresService, calculatePerce
     logger.info('GET index');
 
     const donationFigures = await donationFiguresService.getFigures();
-    const percentage = await calculatePercentage(donationFigures.target, donationFigures.raised);
+    const percentage = await calculatePercentage(donationFigures.raised, donationFigures.target);
 
     res.render('pages/index', { donationFigures, percentage });
   });
