@@ -30,7 +30,7 @@ You can view the site on http://localhost:3000/
 
 `yarn test`
 
-### Lint
+### Lint
 
 `yarn lint`
 
