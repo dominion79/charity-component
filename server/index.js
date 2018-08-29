@@ -6,9 +6,7 @@ const CharityClient = require('./clients/charityClient');
 const { calculatePercentage } = require('./utils/index');
 
 
-const donationFiguresService = getDonationFiguresService(
-  new CharityClient(),
-);
+const donationFiguresService = getDonationFiguresService(new CharityClient());
 
 const app = createApp({
   logger,

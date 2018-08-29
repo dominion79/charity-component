@@ -20,7 +20,11 @@ const version = moment.now().toString();
 const production = process.env.NODE_ENV === 'production';
 const testMode = process.env.NODE_ENV === 'test';
 
-module.exports = function createApp({ logger, donationFiguresService, calculatePercentage }) { // eslint-disable-line no-shadow
+module.exports = function createApp({
+  logger, // eslint-disable-line no-shadow
+  donationFiguresService,
+  calculatePercentage,
+}) {
   const app = express();
 
   app.set('json spaces', 2);
