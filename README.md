@@ -6,6 +6,9 @@ View online at https://charity-component.azurewebsites.net/
 
 Node version 8
 
+I would recommend using [nvm](https://github.com/creationix/nvm/blob/master/README.md) to switch between node versions
+
+
 ## Setup
 
 ### Install Dependencies 
