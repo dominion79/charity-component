@@ -69,4 +69,4 @@ Below are improvements that are still/could to be implemented:
 * Form validation 
 * Add CI and auto deployment 
 * Counter animation to the values
-* Browser tests
+* Automated browser tests
