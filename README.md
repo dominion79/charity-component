@@ -8,13 +8,9 @@ View online at https://charity-component.azurewebsites.net/
 
 `yarn install`
 
-### Build app 
+### Build app and copy assets
 
-`yarn build`
-
-### Copy static assets 
-
-`yarn copy-assets`
+`yarn build && yarn copy-assets`
 
 ### Start server in dev mode
 
