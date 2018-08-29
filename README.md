@@ -23,7 +23,7 @@ I would recommend using [nvm](https://github.com/creationix/nvm/blob/master/READ
 
 `cp .env-template .env`
 
-Add the following environment variables
+Add the following environment variables to the `.env` file
 
 ```
 PORT=3000
