@@ -12,7 +12,7 @@ View online at https://charity-component.azurewebsites.net/
 
 `yarn build && yarn copy-assets`
 
-### Start server in dev mode
+### Start server in dev mode
 
 You can view the site on http://localhost:3000/
 
