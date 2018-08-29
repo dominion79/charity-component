@@ -1,9 +1,9 @@
 {
-  "name": "gov-starter",
+  "name": "node-app-starter",
   "version": "0.0.0",
   "scripts": {
     "start": "node server.js",
-    "start:dev": "yarn build && DEBUG=gov-starter-server* nodemon server.js | bunyan -o short",
+    "start:dev": "yarn build && DEBUG=node-app-starter-server* nodemon server.js | bunyan -o short",
     "copy-assets": "cpx 'node_modules/coop-frontend-toolkit/static/**/*' 'assets/'",
     "build": "yarn run css-build",
     "css-build": "./bin/build-css",

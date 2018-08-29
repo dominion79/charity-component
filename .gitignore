@@ -4,8 +4,6 @@
 .port.tmp
 public
 assets/stylesheets/application.css
-lib/govuk_template.html
-govuk_modules
 node_modules/*
 .tmuxp.*
 .idea
