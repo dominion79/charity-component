@@ -14,9 +14,9 @@ View online at https://charity-component.azurewebsites.net/
 
 ### Start server in dev mode
 
-You can view the site on http://localhost:3000/
-
 `yarn start:dev`
+
+You can view the site on http://localhost:3000/
 
 ### Start server
 
