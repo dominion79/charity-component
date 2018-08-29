@@ -12,6 +12,17 @@ View online at https://charity-component.azurewebsites.net/
 
 `yarn build && yarn copy-assets`
 
+## Setup ENV vars
+
+`cp .env-template .env`
+
+Add the following environment variables
+
+```
+PORT=3000
+COOP_MOCK_API_ENDPOINT=https://coop-mock-test-api.herokuapp.com/
+```
+
 ### Start server in dev mode
 
 `yarn start:dev`
