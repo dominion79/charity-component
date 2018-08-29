@@ -43,8 +43,9 @@ You can view the site on http://localhost:3000/
 
 `docker pull dominion79/charity-component`
 
-`docker run -d -p 8080:3000 dominion79/charity-component -t charity-component`
+`docker run -d -p 8080:3000 dominion79/charity-component`
 
+You can view the site on http://localhost:8080/
 
 ## To do
 
