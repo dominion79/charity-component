@@ -2,6 +2,10 @@
 
 View online at https://charity-component.azurewebsites.net/
 
+## Requirments
+
+Node version 8
+
 ## Setup
 
 ### Install Dependencies 
