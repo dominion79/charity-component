@@ -3,8 +3,7 @@ const config = require('../config');
 function getDonationFiguresService(httpClient) {
   async function getFigures() {
     try {
-      const response = await httpClient.get(config.api.coopMockTest);
-      return response;
+      return await httpClient.get(config.api.coopMockTest);
     } catch (ex) {
       return null;
     }
